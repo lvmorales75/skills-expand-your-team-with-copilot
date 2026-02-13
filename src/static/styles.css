@@ -5,11 +5,16 @@
   --primary-light: #7fff00;
   --primary-dark: #228b22;
   --primary-text: #1a1a1a;
+  /* Primary colors - School Colors: Lime Green and White */
+  --primary: #32cd32;
+  --primary-light: #7fff00;
+  --primary-dark: #228b22;
+  --primary-text: #ffffff;
 
   /* Secondary colors */
-  --secondary: #ff6f00;
-  --secondary-light: #ffa040;
-  --secondary-dark: #c43e00;
+  --secondary: #32cd32;
+  --secondary-light: #7fff00;
+  --secondary-dark: #228b22;
   --secondary-text: #ffffff;
 
   /* Neutral colors - White background */
@@ -125,6 +130,32 @@ header h1 {
 
 header h2 {
   font-size: 1.2rem;
+}
+
+/* Mascot container and styling */
+.mascot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.mascot {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 3px solid var(--primary-text);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mascot:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 main {
@@ -528,6 +559,32 @@ footer {
   padding: 10px;
   color: var(--text-secondary);
   font-size: 0.8rem;
+}
+
+/* Animated Git-style branch lines background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.05;
+  background-image:
+    linear-gradient(90deg, var(--primary) 2px, transparent 2px),
+    linear-gradient(0deg, var(--primary) 2px, transparent 2px);
+  background-size: 50px 50px;
+  animation: gitBranchAnimation 20s linear infinite;
+}
+
+@keyframes gitBranchAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
 }
 
 /* Search and Filter Components - Updated for Sidebar */
