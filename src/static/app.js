@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeLoginModal = document.querySelector(".close-login-modal");
   const loginMessage = document.getElementById("login-message");
 
-  // Activity categories with corresponding colors
+  // Activity categories with corresponding colors - Updated for green theme
   const activityTypes = {
-    sports: { label: "Sports", color: "#e8f5e9", textColor: "#2e7d32" },
-    arts: { label: "Arts", color: "#f3e5f5", textColor: "#7b1fa2" },
-    academic: { label: "Academic", color: "#e3f2fd", textColor: "#1565c0" },
-    community: { label: "Community", color: "#fff3e0", textColor: "#e65100" },
-    technology: { label: "Technology", color: "#e8eaf6", textColor: "#3949ab" },
+    sports: { label: "Sports", color: "#d4f4dd", textColor: "#228b22" },
+    arts: { label: "Arts", color: "#e8f5e9", textColor: "#2e7d32" },
+    academic: { label: "Academic", color: "#c8e6c9", textColor: "#1b5e20" },
+    community: { label: "Community", color: "#f1f8e9", textColor: "#558b2f" },
+    technology: { label: "Technology", color: "#dcedc8", textColor: "#33691e" },
   };
 
   // State for activities and filters
